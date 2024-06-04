@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Comment;
 use App\Models\Service;
 use Illuminate\View\Component;
 use Illuminate\View\View;
@@ -9,9 +10,10 @@ use Illuminate\View\View;
 class CrestaServiceLayout extends Component
 {
 
-    public function __construct(public string $name, public string $imagepath = "")
+    // public $id;
+    public function __construct(public string $name, public string $imagepath = "", public int $id = 0)
     {
-        // dd($name);
+        $this->id = $id;
     }
 
     /**
@@ -20,6 +22,7 @@ class CrestaServiceLayout extends Component
     public function render(): View
     {
         $services = Service::all();
-        return view('layouts.cresta-service', compact('services'));
+        $comments = Comment::where('service_id', $this->id)->where('approved', 1)->get();
+        return view('layouts.cresta-service', compact('services', 'comments'));
     }
 }

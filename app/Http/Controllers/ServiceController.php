@@ -3,23 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Models\Comment;
 use App\Models\Service;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Response;
+
 
 class ServiceController extends Controller
 {
-    /**
-     * Display the index page.
-     */
-    public function index(Request $request): View
-    {
-        return view('pages.index');
-    }
-
     /**
      * Display the services page.
      */
@@ -28,6 +23,7 @@ class ServiceController extends Controller
         $services = Service::all();
         return view('pages.services', compact('services'));
     }
+
     /**
      * Display the service page.
      */
@@ -37,37 +33,19 @@ class ServiceController extends Controller
         return view('services.' . $service->slug, compact('service'));
     }
 
-
-
     /**
-     * Display the testimonial page.
+     * Display the service page.
      */
-    public function testimonial(Request $request): View
+    public function comment(Request $request, Service $service)
     {
-        return view('pages.testimonial');
-    }
 
-    /**
-     * Display the news page.
-     */
-    public function news(Request $request): View
-    {
-        return view('pages.news');
-    }
+        $comment = Comment::create($request->all());
 
-    /**
-     * Display the faq page.
-     */
-    public function faq(Request $request): View
-    {
-        return view('pages.faq');
-    }
-
-    /**
-     * Display the about page.
-     */
-    public function about(Request $request): View
-    {
-        return view('pages.about');
+        if ($comment->id) {
+            return Response::json('Comment Sent Successfully!', 200);
+            // session()->flash('CommentSent', 'Comment Sent Successfully!');
+            return redirect()->intended(route('pages.service', $service))->with('CommentSent', 'Comment Sent Successfully!');
+        }
+        return redirect()->intended(route('pages.service'))->with('error', 'An error Occured! Please try again');
     }
 }

@@ -4,7 +4,20 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>RetrivalPrime | </title>
+    <title>RetrivalPrime | {{ $title }}</title>
+
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description"
+        content="Discover the top rated Titanium Stainless Steel cookware- we have the right pot, pan or baking dish when it’s time to whip up a masterpiece in your kitchen! best cookware in Lagos Nigeira">
+    <meta name="description"
+        content="Browse our wide selection of high-quality cookware sets, saucepans, stock pots, skillets, sautés, and more. Enhance your cooking experience with our gourmet slow cookers and specialty items. We also offer a range of bakeware including cookie sheets, cake pans, and loaf pans. Shop now for the best cookware and bakeware sets to elevate your culinary creations.">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="@yield('og_title')" />
+    <meta property="og:url" content="@yield('og_url')" />
+    <meta property="og:site_name" content="Kitchen Craft | waterlesscookware" />
+
+
+
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -31,25 +44,300 @@
     <div id="loading">
         <div id="loading-center">
             <div id="loading-center-absolute">
-                <div class="object" id="object_four"></div>
+
+                {{-- <div class="object" id="object_four"></div>
                 <div class="object" id="object_three"></div>
                 <div class="object" id="object_two"></div>
                 <div class="object" id="object_one"></div>
+                <div class="object" id="object_one">
+                </div> --}}
+                <img class="object" id="object_logo" src="{{ asset('assets/img/logo/retrivalprime.png') }}" />
             </div>
         </div>
     </div>
     {{--  <!-- pre loader area end --> --}}
 
     {{--  <!-- back to top start --> --}}
-    <div class="back-to-top-wrapper">
+    {{-- <div class="back-to-top-wrapper">
         <button id="back_to_top" type="button" class="back-to-top-btn">
             <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
             </svg>
         </button>
-    </div>
+    </div> --}}
     {{--  <!-- back to top end --> --}}
+    <style>
+        #floating-button {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            /* background: #db4437; */
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            cursor: pointer;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .plus {
+            color: white;
+            position: absolute;
+            top: 0;
+            display: block;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            line-height: 55px;
+            font-size: 20px;
+            font-weight: 300;
+            animation: plus-out 0.3s;
+            transition: all 0.3s;
+        }
+
+        #container-floating {
+            position: fixed;
+            width: 70px;
+            height: 70px;
+            bottom: 30px;
+            right: 30px;
+            z-index: 500;
+        }
+
+        #container-floating:hover {
+            height: 400px;
+            width: 90px;
+            padding: 30px;
+        }
+
+        #container-floating:hover .plus {
+            animation: plus-in 0.15s linear;
+            animation-fill-mode: forwards;
+        }
+
+        .edit {
+            color: white;
+            position: absolute;
+            top: 0;
+            display: block;
+            bottom: 0;
+            left: 0;
+            display: block;
+            font-size: 20px;
+            right: 0;
+            padding: 0;
+            opacity: 0;
+            margin: auto;
+            line-height: 55px;
+            transform: rotate(90deg);
+            transition: all 0.3s;
+            animation: edit-out 0.3s;
+
+        }
+
+        #container-floating:hover .edit {
+            animation: edit-in 0.2s;
+            animation-delay: 0.1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes edit-in {
+            from {
+                opacity: 0;
+                transform: rotateZ(90deg);
+            }
+
+            to {
+                opacity: 1;
+                transform: rotateZ(0deg);
+            }
+        }
+
+        @keyframes edit-out {
+            from {
+                opacity: 1;
+                transform: rotate(0deg);
+            }
+
+            to {
+                opacity: 0;
+                transform: rotate(90deg);
+            }
+        }
+
+        @keyframes plus-in {
+            from {
+                opacity: 1;
+                transform: rotateZ(0deg);
+            }
+
+            to {
+                opacity: 0;
+                transform: rotateZ(180deg);
+            }
+        }
+
+        @keyframes plus-out {
+            from {
+                opacity: 0;
+                transform: rotateZ(180deg);
+            }
+
+            to {
+                opacity: 1;
+                transform: rotateZ(0deg);
+            }
+        }
+
+        .nds {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: fixed;
+            z-index: 300;
+            transform: scale(0);
+            cursor: pointer;
+        }
+
+        .nd1 {
+            /* background: #d3a411; */
+            right: 40px;
+            bottom: 120px;
+            animation-delay: 0.2s;
+            animation: bounce-out-nds 0.3s linear;
+            animation-fill-mode: forwards;
+        }
+
+        .nd3 {
+            /* background: #3c80f6; */
+            right: 40px;
+            bottom: 180px;
+            animation-delay: 0.15s;
+            animation: bounce-out-nds 0.15s linear;
+            animation-fill-mode: forwards;
+        }
+
+        .nd4 {
+            /* background: #ba68c8; */
+            right: 40px;
+            bottom: 240px;
+            animation-delay: 0.1s;
+            animation: bounce-out-nds 0.1s linear;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes bounce-nds {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bounce-out-nds {
+            from {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            to {
+                opacity: 0;
+                transform: scale(0);
+            }
+        }
+
+        #container-floating:hover .nds {
+            animation: bounce-nds 0.1s linear;
+            animation-fill-mode: forwards;
+        }
+
+        #container-floating:hover .nd3 {
+            animation-delay: 0.08s;
+        }
+
+        #container-floating:hover .nd4 {
+            animation-delay: 0.15s;
+        }
+
+        #container-floating:hover .nd5 {
+            animation-delay: 0.2s;
+        }
+
+        .letter {
+            font-size: 23px;
+            font-family: "Roboto";
+            color: white;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0;
+            top: 0;
+            bottom: 0;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .reminder {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            line-height: 40px;
+        }
+
+        .profile {
+            border-radius: 50%;
+            width: 40px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            right: 20px;
+        }
+    </style>
+    <div class="">
+
+        <div id="container-floating">
+            <div class="nd4 nds tg-btn-gradient sm">
+                <p class="letter">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </p>
+            </div>
+            <div class="nd3 nds tg-btn-gradient sm">
+                <p class="letter">
+                    <i class="fa-brands fa-telegram"></i>
+                </p>
+            </div>
+            <div class="nd1 nds tg-btn-gradient sm">
+                <p class="letter">
+                    <i class="fa-brands fa-instagram"></i>
+                </p>
+            </div>
+
+            <div id="floating-button" class="tg-btn-gradient sm">
+                <p class="plus">
+                    <i class="fa-solid fa-headphones"></i>
+                </p>
+                <p class="edit">
+                    <i class="fa-solid fa-headphones"></i>
+                    {{-- <i class="fa-solid fa-microphone"></i> --}}
+                </p>
+                {{-- <img class="edit"
+                    src="https://ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/bt_compose2_1x.png"> --}}
+            </div>
+        </div>
+
+
+    </div>
 
     <header>
 
@@ -77,7 +365,8 @@
                             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
                             <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="#"><i class="fa-regular fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
@@ -118,10 +407,10 @@
                                         <li>
                                             <a href="{{ route('pages.index') }}#testimonials">Testimonials</a>
                                         </li>
-                                        <li>
+                                        {{-- <li>
                                             <a href="{{ route('pages.news') }}">News</a>
-
-                                        </li>
+                                        </li> --}}
+                                        <li><a href="{{ route('pages.contact') }}">Contact</a></li>
                                         <li><a href="{{ route('pages.faq') }}">FAQ</a></li>
                                     </ul>
                                 </nav>
@@ -147,20 +436,21 @@
             <nav class="tgmobile__menu-box">
                 <div class="close-btn"><i class="fa-sharp fa-regular fa-xmark"></i></div>
                 <div class="nav-logo">
-                    <a href="index.html">
-                        <img src="assets/img/logo/logo-white.png" alt="Nerko">
+                    <a href="{{ route('pages.index') }}">
+                        <img src="{{ asset('assets/img/logo/retrivalprime_full_white.png') }}"
+                            alt="Retrival Prome logo">
                     </a>
                 </div>
                 <div class="tgmobile__menu-outer">
-                    <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--> --}}
+                    <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
                 </div>
                 <div class="social-links">
                     <ul class="list-wrap">
                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-discord"></i></a></li>
-                        <li><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
+                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                        <li><a href="#"><i class="fab fa-envelope"></i></a></li>
                     </ul>
                 </div>
             </nav>

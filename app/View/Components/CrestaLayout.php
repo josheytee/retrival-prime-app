@@ -9,6 +9,12 @@ use Illuminate\View\View;
 class CrestaLayout extends Component
 {
 
+    public function __construct(public string $title = "Home")
+    {
+    }
+
+
+
     /**
      * Get the view / contents that represents the component.
      */

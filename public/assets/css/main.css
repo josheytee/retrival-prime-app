@@ -1086,9 +1086,9 @@ input[type=color] {
   -webkit-border-radius: 50% 50% 50% 50%;
   border-radius: 50% 50% 50% 50%;
   position: absolute;
-  border-top: 5px solid #FFF;
+  /* border-top: 5px solid #FFF; */
   border-bottom: 5px solid transparent;
-  border-left: 5px solid #FFF;
+  /* border-left: 5px solid #FFF; */
   border-right: 5px solid transparent;
   -webkit-animation: animate 2s infinite;
   animation: animate 2s infinite;
@@ -1128,12 +1128,20 @@ input[type=color] {
   animation-delay: 0.6s;
 }
 
+
+#object_logo {
+    left: 0;
+    top: 0;
+    transform: rotate(-220deg) scale(0.5);
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+  }
 @keyframes animate {
   50% {
     -ms-transform: rotate(360deg) scale(0.8);
     -webkit-transform: rotate(360deg) scale(0.8);
     transform: rotate(360deg) scale(0.8);
-  }
+}
 }
 /*=============================
     - Background color
@@ -3689,7 +3697,15 @@ input[type=color] {
   padding-bottom: 37px;
   border: 1px solid var(--tg-border-1);
   background-color: var(--tg-common-white);
+
 }
+/* .tg-service-3-item:hover {
+    background-color: var(--tg-theme-2);
+    /* background: url('/assets/img/services/lost-coin.jpg'); *
+    opacity: 0.5;
+    /* animation: tgtranslateX2 4s infinite alternate; *
+    transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,transform 800ms,.4s;
+  } */
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .tg-service-3-item {
     margin-bottom: 30px;
@@ -6864,6 +6880,47 @@ input[type=color] {
   opacity: 1;
   visibility: visible;
 }
+
+.tg-team-2-social-box-2 span {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    color: var(--tg-common-white);
+    background: var(--tg-common-black);
+    transition: 0.5s;
+    position: relative;
+  }
+
+.tg-team-2-social-box-2 span::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    border-radius: 5px;
+    background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+}
+
+.tg-team-2-social-box-2:hover .tg-team-2-social {
+  opacity: 1;
+  visibility: visible;
+  bottom: 98px;
+  left: 0;
+  z-index: 33;
+}
+
+.tg-team-2-social-box-2:hover span::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 .tg-team-2-arrow-box button {
   height: 60px;
   width: 60px;

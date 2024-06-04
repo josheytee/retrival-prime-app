@@ -7,11 +7,11 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="tg-breadcrumb__content z-index-3 text-center">
-                        <h3 class="tg-breadcrumb__title">FAQ</h3>
+                        <h3 class="tg-breadcrumb__title">Services</h3>
                         <div class="tg-breadcrumb__list">
                             <span><a href="{{ route('pages.index') }}">Home</a></span>
                             <span class="dvdr"><i class="fa-solid fa-chevron-right"></i></span>
-                            <span>FAQ</span>
+                            <span>Services</span>
                         </div>
                     </div>
                 </div>
@@ -24,14 +24,14 @@
             <div class="row">
                 @foreach ($services as $service)
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
-                        <div class="tg-service-3-item text-center">
+                        <div class="tg-service-3-item text-center" style="min-height: 400px">
                             <div class="tg-service-3-icon mb-25">
                                 <span>
                                     <i class="{{ $service->icon }}"></i>
                                 </span>
                             </div>
                             <div class="tg-service-3-content">
-                                <h5 class="tg-service-3-title pb-20"> <a href="">{{ $service->name }} </a>
+                                <h5 class="tg-service-3-title pb-10"> <a href="">{{ $service->name }} </a>
                                 </h5>
                                 <p>{{ $service->content }} </p>
                                 <a class="mt-3 tg-btn-gradient d-none d-md-block"

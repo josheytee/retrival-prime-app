@@ -38,7 +38,7 @@
 			$('html, body').animate({ scrollTop: 0 }, '300');
 		});
 	}
-	back_to_top();
+	// back_to_top();
 
 	/*=============================================
 		=           Data Color             =
@@ -112,11 +112,11 @@
 	});
 
 
-	
+
 	if ($('.tg-header-height').length > 0) {
-		var headerHeight = document.querySelector(".tg-header-height");      
-		var setHeaderHeight = headerHeight.offsetHeight;	
-		
+		var headerHeight = document.querySelector(".tg-header-height");
+		var setHeaderHeight = headerHeight.offsetHeight;
+
 		$(".tg-header-height").each(function () {
 			$(this).css({
 				'height' : setHeaderHeight + 'px'
@@ -561,7 +561,7 @@
 		pulse: 2,
 	});
 
-	
+
 	if ($('[data-mask-src]').length > 0) {
 		$('[data-mask-src]').each(function () {
 		  var mask = $(this).attr('data-mask-src');

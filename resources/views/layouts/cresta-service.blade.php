@@ -1,6 +1,6 @@
-<x-cresta-layout>
+<x-cresta-layout title="{{ $name }}" discription="">
     <div class="tg-breadcrumb-area tg-breadcrumb-height tg-breadcrumb-overley black-bg p-relative"
-        data-background="{{ $imagepath }}">
+        data-background="{{ $imagepath }}" id="{{ $id }}">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -64,6 +64,84 @@
                 </div>
                 <div class="col-xl-8 col-lg-8 order-0 order-lg-1">
                     {{ $slot }}
+
+
+                    <div class="tg-contact-form mt-50 mb-50">
+                        <h2 class="tg-sv-details-title-sm mb-10">Comment
+                        </h2>
+                        <form id="contact-form" action="{{ route('service.comment') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="service_id" value="{{ $id }}">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 mb-10">
+                                    <div class="tg-contact-input-box-2">
+                                        <input name="first_name" type="text" placeholder="First Name...">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 mb-10">
+                                    <div class="tg-contact-input-box-2">
+                                        <input name="last_name" type="text" placeholder="Last Name...">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 mb-10">
+                                    <div class="tg-contact-input-box-2">
+                                        <input name="email" type="email" placeholder="Your E-mail...">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 mb-10">
+                                    <div class="tg-contact-input-box-2">
+                                        <input name="phone" type="text" placeholder="Phone Number">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xl-12 mb-10">
+                                    <div class="tg-contact-textarea-box-2">
+                                        <textarea name="comment" type="text" placeholder="Comment"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12">
+                                    <div class="tg-contact-button">
+                                        <button class="tg-btn-gradient w-100" type="submit">Comment</button>
+                                        <p class="ajax-response"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="postbox__comment">
+                        @if ($comments->count() > 0)
+                            <h2 class="tg-sv-details-title-sm mb-10">Comments
+                            </h2>
+                            <ul>
+                                @foreach ($comments as $comment)
+                                    <li>
+                                        <div class="postbox__comment-box p-relative">
+                                            <div class="postbox__comment-info d-flex align-items-start">
+                                                <div class="postbox__comment-avater">
+                                                    <i class="fa-solid fa-user"></i>
+                                                    {{-- <img src="assets/img/blog/avatar-1-1.jpg" alt=""> --}}
+                                                </div>
+                                                <div class="postbox__comment-name p-relative">
+                                                    <h5>{{ $comment->first_name }} {{ $comment->last_name }}</h5>
+                                                    <span>{{ $comment->created_at }}</span>
+                                                    <div class="postbox__comment-text">
+                                                        <p>{{ $comment->comment }}</p>
+                                                        {{-- <div class="postbox__comment-reply">
+                                                    <a class="tg-btn-gradient" href="#">Reply</a>
+                                                </div> --}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        @else
+                            No Comments yet
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,4 +1,5 @@
-<x-cresta-service-layout name="{{ $service->name }}" imagepath="{{ asset('assets/img/services/lost-coin-2.avif') }}">
+<x-cresta-service-layout name="{{ $service->name }}" imagepath="{{ asset('assets/img/services/lost-coin-2.avif') }}"
+    id="{{ $service->id }}">
 
     <div class="tg-sv-details-wrap">
         <div class="row gx-30">
@@ -9,22 +10,27 @@
                 </div>
             </div> --}}
             <div class="col-xl-12 ">
-                {{-- <div style="height:  300px">
-
-                    <img src="{{ asset('assets/img/services/lost-coin-2.avif') }}" alt="" style="width: 100%; " />
-                </div> --}}
 
                 <div class="tg-sv-details-content">
                     <h5 class="tg-sv-details-title-sm mb-10">Navigating the Complex Terrain of Cryptocurrency Scams
                     </h5>
-                    <div class="elementor-widget-container">
-                        <p>Bitcoin’s meteoric rise as a standout in the cryptocurrency market has drawn the
-                            attention of
-                            both eager investors and cunning scammers. These bad actors often hide behind the facade
-                            of
-                            legitimate crypto exchanges, baiting investors with the promise of exponential gains,
-                            only
-                            to dupe them out of their funds.</p>
+                    <div>
+                        <p>
+                        <div class="tg-sv-details-thumb-sm">
+                            <img src="{{ asset('assets/img/services/lost-coin.jpg') }}"
+                                style="
+                                height: 350px;
+                                object-fit: cover;
+                            "
+                                alt="" />
+                        </div>
+                        Bitcoin’s meteoric rise as a standout in the cryptocurrency market has drawn the
+                        attention of
+                        both eager investors and cunning scammers. These bad actors often hide behind the facade
+                        of
+                        legitimate crypto exchanges, baiting investors with the promise of exponential gains,
+                        only
+                        to dupe them out of their funds.</p>
                         <p>Retrievetron’s Cryptocurrency Recovery Initiative is a fortress of resilience against
                             cybercrimes. It’s a concerted effort that pools intelligence and deploys asset tracing
                             services for the victims of digital theft. We bridge the gap between those affected by

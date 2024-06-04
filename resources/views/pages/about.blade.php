@@ -29,7 +29,7 @@
         </div>
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 order-1 order-lg-0  wow tgfadeLeft" data-wow-duration=".9s"
+                <div class="col-xl-6 col-lg-6 order-1 order-lg-0 wow tgfadeLeft" data-wow-duration=".9s"
                     data-wow-delay=".5s">
                     <div class="tg-about-left">
                         <div class="tg-about-thumb-box p-relative">
@@ -48,14 +48,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6 col-lg-6 order-0 order-lg-1  wow tgfadeRight" data-wow-duration=".9s"
+                <div class="col-xl-6 col-lg-6 order-0 order-lg-1 wow tgfadeRight" data-wow-duration=".9s"
                     data-wow-delay=".7s">
                     <div class="tg-about-right">
                         <div class="tg-about-title-box mb-15">
                             <span class="tg-section-subtitle">Who We Are</span>
                             <h4 class="tg-section-title">Providing Top Tier Cyber Solutions</h4>
                         </div>
-                        <div class="tg-about-text mb-40">
+                        <div class="tg-about-text mb-20">
                             <p>Technology provides the tools to advance and disseminate information — objectives central
                                 to IT that streamline tasks and address numerous challenges.</p>
                         </div>

@@ -27,6 +27,8 @@ Route::get('/news', [PageController::class, 'news'])->name('pages.news');
 Route::get('/contact', [PageController::class, 'contact'])->name('pages.contact');
 Route::post('/message', [PageController::class, 'message'])->name('pages.message');
 
+Route::post('/comment', [ServiceController::class, 'comment'])->name('service.comment');
+
 
 
 Route::get('/dashboard', function () {

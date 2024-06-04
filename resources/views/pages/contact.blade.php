@@ -159,9 +159,10 @@
                             </div>
                             <div class="tg-contact-social">
                                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-vimeo-v"></i></a>
+                                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
                                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
                                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-regular fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>

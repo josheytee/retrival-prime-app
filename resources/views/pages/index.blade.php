@@ -1,3 +1,6 @@
+@section('title')
+    Home
+@endsection
 <x-cresta-layout>
     <!-- hero-area-start -->
     <div class="tg-hero-area tg-hero-ptb z-index theme-bg p-relative fix">
@@ -57,43 +60,46 @@
     <!-- hero-area-end -->
 
     <!-- feature-area-start -->
-    {{-- <div class="tg-feature-area tg-feature-wrap z-index">
+    <div class="tg-feature-area tg-feature-wrap z-index">
         <div class="container">
             <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 wow tgfadeUp" data-wow-duration=".9s"
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 wow tgfadeUp" data-wow-duration=".9s"
                     data-wow-delay=".3s">
                     <div class="tg-feature-item text-center">
                         <div class="tg-feature-icon mb-15">
                             <span>
-                                <i class="flaticon-015-email"></i>
+                                <i class="fa-regular fa-clock"></i>
                             </span>
                         </div>
-                        <h5 class="tg-feature-title">Elevate Your Business DataMasters</h5>
+                        <h5 class="tg-feature-title">
+                            24 hour support</h5>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 wow tgfadeUp" data-wow-duration=".9s"
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 wow tgfadeUp" data-wow-duration=".9s"
                     data-wow-delay=".5s">
                     <div class="tg-feature-item text-center">
                         <div class="tg-feature-icon pl mb-15">
                             <span>
-                                <i class="flaticon-022-ssd"></i>
+                                <i class="fa-solid fa-hand-holding-dollar"></i>
                             </span>
                         </div>
-                        <h5 class="tg-feature-title">Simplify IT Enhanced WebWizard</h5>
+                        <h5 class="tg-feature-title">
+                            100% refund guarnatee
+                        </h5>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 wow tgfadeUp" data-wow-duration=".9s"
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 wow tgfadeUp" data-wow-duration=".9s"
                     data-wow-delay=".7s">
                     <div class="tg-feature-item text-center">
                         <div class="tg-feature-icon mb-15">
                             <span>
-                                <i class="flaticon-029-webcam"></i>
+                                <i class="fa-regular fa-thumbs-up"></i>
                             </span>
                         </div>
-                        <h5 class="tg-feature-title"> Unlock Your Business NetWorks</h5>
+                        <h5 class="tg-feature-title"> No Win no fee</h5>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 wow tgfadeUp" data-wow-duration=".9s"
+                {{-- <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 wow tgfadeUp" data-wow-duration=".9s"
                     data-wow-delay=".9s">
                     <div class="tg-feature-item text-center">
                         <div class="tg-feature-icon pl mb-15">
@@ -103,10 +109,10 @@
                         </div>
                         <h5 class="tg-feature-title">Experience the Future TechSupport</h5>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
-    </div> --}}
+    </div>
     <!-- feature-area-end -->
 
     <!-- about-area-start -->
@@ -142,12 +148,12 @@
                             <span class="tg-section-subtitle">Who We Are</span>
                             <h4 class="tg-section-title">Providing Top Tier Cyber Solutions</h4>
                         </div>
-                        <div class="tg-about-text mb-40">
+                        <div class="tg-about-text mb-20">
                             <p>Technology provides the tools to advance and disseminate information — objectives central
                                 to IT that streamline tasks and address numerous challenges.</p>
                         </div>
                         <div class="tg-hero-button">
-                            <a class="tg-btn-gradient" href="about-us.html">
+                            <a class="tg-btn-gradient" href="{{ route('pages.about') }}">
                                 Read More
                                 <span>
                                     <svg width="17" height="12" viewBox="0 0 17 12" fill="none"
@@ -206,7 +212,7 @@
                             <p>If you’ve suffered financial losses as an investor, trader, miner, consumer, romance scam
                                 victim, or general online user, we’re equipped to assist. </p>
                         </div>
-                        <div class="tg-about-2-list mb-40">
+                        <div class="tg-about-2-list mb-20">
                             <ul>
                                 <li>
                                     <i class="fas fa-check-square"></i> Our
@@ -476,7 +482,7 @@
                     </div> --}}
                 </div>
             </div>
-            <div class="tg-exp-main-wrap">
+            {{-- <div class="tg-exp-main-wrap">
                 <div class="row">
                     @foreach ($services as $service)
                         <div class="col-xl-4" style="height: 350px">
@@ -506,12 +512,37 @@
 
                                     </div>
                                 </a>
-                                {{-- <div class="tg-reveal-bg" data-background="assets/img/exprience/exp-1.png"></div> --}}
+        </div>
+    </div>
+    @endforeach
+
+
+    </div>
+    </div> --}}
+            <div class="tg-service-3-area tg-service-3-inner-style z-index-3 pt-50 pb-115">
+                <div class="container">
+                    <div class="row">
+                        @foreach ($services as $service)
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                                <div class="tg-service-3-item text-center" style="min-height: 400px">
+                                    <div class="tg-service-3-icon mb-25">
+                                        <span>
+                                            <i class="{{ $service->icon }}"></i>
+                                        </span>
+                                    </div>
+                                    <div class="tg-service-3-content">
+                                        <h5 class="tg-service-3-title pb-10"> <a href="">{{ $service->name }}
+                                            </a>
+                                        </h5>
+                                        <p>{{ $service->content }} </p>
+                                        <a class="mt-3 tg-btn-gradient d-none d-md-block"
+                                            href="{{ route('pages.service', $service) }}">Learn
+                                            More</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    @endforeach
-
-
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
