@@ -19,17 +19,17 @@
                             alt="" />
                     </div>
 
-                    Retrievetron provides cutting-edge GPS location tracking services designed to deliver precise
+                    RetrivalPrime provides cutting-edge GPS location tracking services designed to deliver precise
                     and real-time location data, ensuring peace of mind for a variety of needs. Whether you’re a
                     business looking to monitor assets, a concerned parent wanting to keep an eye on your
                     children’s whereabouts, or someone needing to track the location of a valuable item,
-                    Retrievetron has the technology and expertise to provide reliable location solutions.</p>
+                    RetrivalPrime has the technology and expertise to provide reliable location solutions.</p>
                     <p>Our GPS tracking system offers an easy-to-use interface and detailed mapping, giving you the
-                        power to stay informed about the locations that matter most to you. With Retrievetron, you
+                        power to stay informed about the locations that matter most to you. With RetrivalPrime, you
                         can set up geofences, receive instant alerts, and access historical location data for any
                         tracked entity. Our robust platform is designed for both individual and enterprise use,
                         ensuring scalability and adaptability to a wide range of tracking purposes.</p>
-                    <p>At Retrievetron, we prioritize your security and convenience, integrating the most advanced
+                    <p>At RetrivalPrime, we prioritize your security and convenience, integrating the most advanced
                         GPS technology to provide a service that is both accurate and user-friendly.</p>
 
 

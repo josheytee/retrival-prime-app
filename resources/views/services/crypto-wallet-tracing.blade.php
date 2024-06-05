@@ -17,16 +17,16 @@
                         object-fit: cover;
                     "
                             alt="" />
-                    </div> Retrievetron offers specialized services in tracking and recovering funds from compromised
+                    </div> RetrivalPrime offers specialized services in tracking and recovering funds from compromised
                     digital wallets. Our team is equipped with sharp intellect, rapid technology, and forensic experts
-                    who lead the industry in retrieving stolen assets. Retrievetron’s wallet fund tracing solutions
+                    who lead the industry in retrieving stolen assets. RetrivalPrime’s wallet fund tracing solutions
                     empower crypto traders to pinpoint and reclaim their bitcoins or other digital currencies. As
                     scammers evolve, employing cunning tactics to exploit online users, especially those involved in
-                    digital asset trading and online payments, Retrievetron stands as a shield against such deceit.</p>
+                    digital asset trading and online payments, RetrivalPrime stands as a shield against such deceit.</p>
                     <p>These fraudsters, operating through sham global payment systems and counterfeit e-wallets, often
                         hack user data to drain wallets. They leave victims with a slew of false narratives about
                         account issues and erroneous transactions, all while depleting their funds. In these cases, when
-                        traditional authorities provide little solace, Retrievetron steps in to fill the gap, tracking
+                        traditional authorities provide little solace, RetrivalPrime steps in to fill the gap, tracking
                         down the culprits who typically leave no trace behind.</p>
                     <a href="{{ route('pages.contact') }}" class="tg-btn-gradient mt-20 text-center">
                         Request for specialist

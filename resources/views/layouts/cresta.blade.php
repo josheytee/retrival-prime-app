@@ -309,17 +309,17 @@
         <div id="container-floating">
             <div class="nd4 nds tg-btn-gradient sm">
                 <p class="letter">
-                    <i class="fa-brands fa-whatsapp"></i>
+                    <a href="{{ $about->whatsapp }}" target="_blank"> <i class="fa-brands fa-whatsapp"></i></a>
                 </p>
             </div>
             <div class="nd3 nds tg-btn-gradient sm">
                 <p class="letter">
-                    <i class="fa-brands fa-telegram"></i>
+                    <a href="{{ $about->facebook }}" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
                 </p>
             </div>
             <div class="nd1 nds tg-btn-gradient sm">
                 <p class="letter">
-                    <i class="fa-brands fa-instagram"></i>
+                    <a href="{{ $about->instagram }}" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
                 </p>
             </div>
 
@@ -350,8 +350,7 @@
                             <ul>
                                 <li>
                                     <i class="fa-sharp fa-solid fa-location-dot"></i>
-                                    <a href="https://www.google.com/maps" target="_blank">6391 Elgin St. Celina,
-                                        10299</a>
+                                    <a href="https://www.google.com/maps" target="_blank">{{ $about->address }}</a>
                                 </li>
                                 <li class="d-none d-md-inline-block">
                                     <i class="fa-light fa-clock"></i>
@@ -362,11 +361,13 @@
                     </div>
                     <div class="col-md-3 col-5">
                         <div class="tg-header-top__social text-end">
-                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                            <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                            <a href="{{ $about->facebook }}" target="_blank"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="{{ $about->instagram }}" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="mailto:{{ $about->email }}" target="_blank"><i
+                                    class="fa-solid fa-envelope"></i></a>
+                            <a href="{{ $about->whatsapp }}" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                         </div>
                     </div>
                 </div>
@@ -446,11 +447,14 @@
                 </div>
                 <div class="social-links">
                     <ul class="list-wrap">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-                        <li><a href="#"><i class="fab fa-envelope"></i></a></li>
+                        <li><a href="{{ $about->facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li><a href="{{ $about->instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li><a href="{{ $about->whatsapp }}" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </li>
+                        <li><a href="mailto:{{ $about->email }}" target="_blank"><i class="fab fa-envelope"></i></a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -488,10 +492,14 @@
                                 <p>Top Tech Experts and specialist you can trust </p>
                             </div>
                             <div class="tg-footer-social">
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-vimeo-v"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="{{ $about->facebook }}" target="_blank"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                                <a href="{{ $about->instagram }}" target="_blank"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="mailto:{{ $about->email }}" target="_blank"><i
+                                        class="fa-solid fa-envelope"></i></a>
+                                <a href="{{ $about->whatsapp }}" target="_blank"><i
+                                        class="fa-brands fa-whatsapp"></i></a>
                             </div>
                         </div>
                     </div>
@@ -520,13 +528,13 @@
                             <h4 class="tg-footer-widget-title">Office Information</h4>
                             <div class="tg-footer-Office-info mb-20">
                                 <span>
-                                    <a target="_blank" href="#"><i class="fa-solid fa-location-dot"></i>1901
-                                        Thornridge
-                                        Cir. Shiloh <br>
-                                        81063</a>
+                                    <a target="_blank" href="#"><i
+                                            class="fa-solid fa-location-dot"></i>{{ $about->address }}</a>
+                                    </a>
                                 </span>
                                 <span>
-                                    <a href="tel:201555-0124"><i class="fa-solid fa-phone"></i>(201) 555-0124</a>
+                                    <a href="tel:201555-0124"><i
+                                            class="fa-solid fa-phone"></i>{{ $about->phone }}</a>
                                 </span>
                             </div>
                             <div class="tg-footer-Office-schedule">

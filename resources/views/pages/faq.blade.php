@@ -119,7 +119,8 @@
                                             industrial specialists who can analyse your case, gather data and
                                             information regarding your<br>perpetrators, and catch our scammer tor vou.
                                             We don't just stop there, we ensure that the scammer returns 100% of the
-                                            stolen amount back to the victim. Here at Retrievetron &nbsp;we use a highly
+                                            stolen amount back to the victim. Here at RetrivalPrime &nbsp;we use a
+                                            highly
                                             integrated and functional process to catch scammers and recover stolen
                                             funds. The entire procedure of recovering funds can take between 7-72 hours
                                             depending on the nature of your scam case. If you believe funds have been

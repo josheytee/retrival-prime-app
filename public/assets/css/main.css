@@ -1133,8 +1133,8 @@ input[type=color] {
     left: 0;
     top: 0;
     transform: rotate(-220deg) scale(0.5);
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
   }
 @keyframes animate {
   50% {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Models\About;
 use App\Models\Contact;
 use App\Models\Service;
 use Illuminate\Http\RedirectResponse;
@@ -365,6 +366,8 @@ class PageController extends Controller
         );
 
         $services = Service::all();
-        return view('pages.contact', compact('services', 'countries'));
+
+        $about = About::first();
+        return view('pages.contact', compact('services', 'countries', 'about'));
     }
 }

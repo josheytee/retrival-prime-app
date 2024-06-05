@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="tg-contact-info">
                                     <h5>Lets talk or Chat on Whatsapp </h5>
-                                    <a href="tel:0123456789101">012 345 678 9101</a>
+                                    <a href="{{ $about->whatsapp }}" target="_blank">012 345 678 9101</a>
                                 </div>
                             </div>
                             <div class="tg-contact-item d-flex align-items-center mb-20">
@@ -87,7 +87,7 @@
                                 </div>
                                 <div class="tg-contact-info">
                                     <h5>Email us</h5>
-                                    <a href="mailto:Company@mail.com">Company@mail.com</a>
+                                    <a href="mailto:{{ $about->email }}">{{ $about->email }}</a>
                                 </div>
                             </div>
                             <div class="tg-contact-item d-flex align-items-center">
@@ -122,8 +122,7 @@
                                 <div class="tg-contact-info">
                                     <h5>Head Office </h5>
                                     <a target="_blank"
-                                        href="https://www.google.com/maps/@23.8370338,90.3623014,12z?entry=ttu">99
-                                        Ohio,America</a>
+                                        href="https://www.google.com/maps/@23.8370338,90.3623014,12z?entry=ttu">{{ $about->address }}</a>
                                 </div>
                             </div>
                         </div>
@@ -158,11 +157,15 @@
                                 <p>Don't hesitate to contact us for more information. </p>
                             </div>
                             <div class="tg-contact-social">
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#"><i class="fa-regular fa-envelope"></i></a>
+
+                                <a href="{{ $about->facebook }}" target="_blank"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                                <a href="{{ $about->instagram }}" target="_blank"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="mailto:{{ $about->email }}" target="_blank"><i
+                                        class="fa-solid fa-envelope"></i></a>
+                                <a href="{{ $about->whatsapp }}" target="_blank"><i
+                                        class="fa-brands fa-whatsapp"></i></a>
                             </div>
                         </div>
                     </div>
