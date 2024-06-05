@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\About;
 use App\Models\Service;
 use Illuminate\View\Component;
 use Illuminate\View\View;
@@ -21,7 +22,8 @@ class CrestaLayout extends Component
     public function render(): View
     {
         $services = Service::all();
+        $about = About::first();
 
-        return view('layouts.cresta', compact('services'));
+        return view('layouts.cresta', compact('services', 'about'));
     }
 }

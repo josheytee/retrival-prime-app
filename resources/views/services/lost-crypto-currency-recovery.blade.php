@@ -31,7 +31,7 @@
                         legitimate crypto exchanges, baiting investors with the promise of exponential gains,
                         only
                         to dupe them out of their funds.</p>
-                        <p>Retrievetron’s Cryptocurrency Recovery Initiative is a fortress of resilience against
+                        <p>RetrivalPrime’s Cryptocurrency Recovery Initiative is a fortress of resilience against
                             cybercrimes. It’s a concerted effort that pools intelligence and deploys asset tracing
                             services for the victims of digital theft. We bridge the gap between those affected by
                             cybercrime and our cadre of professionals who specialize in the retrieval of stolen

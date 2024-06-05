@@ -20,14 +20,14 @@
                     </div>
 
                     When it comes to gaming, the seamless experience of accessing your favorite virtual worlds is
-                    crucial. Retrievetron understands this passion and offers specialized services for both game
+                    crucial. RetrivalPrime understands this passion and offers specialized services for both game
                     account activation and reactivation. Whether you’re starting a new adventure or returning to
                     a cherished game, our support ensures your entry is as smooth as possible.</p>
-                    <p>For new gamers or those exploring fresh landscapes, Retrievetron provides a streamlined
+                    <p>For new gamers or those exploring fresh landscapes, RetrivalPrime provides a streamlined
                         account activation process, handling the necessary steps to ensure you’re quickly immersed
                         in play. Our activation service includes verifying your credentials, setting up secure
                         access, and providing detailed guidance for any platform-specific requirements.</p>
-                    <p>If you’ve stepped away and need to dive back into your game, Retrievetron’s reactivation
+                    <p>If you’ve stepped away and need to dive back into your game, RetrivalPrime’s reactivation
                         services are designed to recover your access with ease. We assist in retrieving lost account
                         information, resetting passwords, and navigating any additional security measures. Our team
                         is equipped to handle issues from data corruption to forgotten login details, ensuring that

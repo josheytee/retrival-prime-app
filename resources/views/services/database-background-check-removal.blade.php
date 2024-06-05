@@ -18,10 +18,10 @@
                         object-fit: cover;
                     "
                             alt="" />
-                    </div> Retrievetron acknowledges the complexities and potential concerns surrounding personal data
+                    </div> RetrivalPrime acknowledges the complexities and potential concerns surrounding personal data
                     found in databases and background checks. In response, we offer specialized services for individuals
                     seeking to manage their digital footprint through database and background check removal.</p>
-                    <p>Understanding the sensitivity of this matter, Retrievetron approaches each case with the utmost
+                    <p>Understanding the sensitivity of this matter, RetrivalPrime approaches each case with the utmost
                         confidentiality and diligence. Our team is skilled in identifying and addressing personal
                         information within various databases and records, ensuring that your request for privacy is
                         honored. We navigate through legal and procedural frameworks to facilitate the removal of your

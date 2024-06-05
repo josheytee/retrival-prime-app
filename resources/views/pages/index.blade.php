@@ -24,7 +24,8 @@
                                 Experts Providing Advanced Solutions</h1>
                         </div>
                         <div class="tg-hero-text mb-35 wow tgfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
-                            <p>Welcome to the cutting-edge of cybertech. <br>At Retrievetron, our elite IT professionals
+                            <p>Welcome to the cutting-edge of cybertech. <br>At RetrivalPrime, our elite IT
+                                professionals
                                 deliver state-of-the-art solutions <br> to protect and empower you in the digital world.
                             </p>
                         </div>
@@ -317,7 +318,7 @@
                     <div class="tg-service-3-title-box text-center mb-60">
                         <span class="tg-section-subtitle-2">Your Recovery Journey</span>
                         <h4 class="tg-section-title text-white">Seamless Asset Retrieval in Three Steps</h4>
-                        <p>Embark on a straightforward path to reclaiming what’s yours with Retrievetron. Our proven
+                        <p>Embark on a straightforward path to reclaiming what’s yours with RetrivalPrime. Our proven
                             three-step process is designed to restore your digital assets quickly and securely. With
                             transparency at the core and cutting-edge technology in use, we navigate the
                             complexities of digital recovery so you can relax, knowing your assets are on their way
@@ -384,9 +385,9 @@
                 <div class="col-xl-7 col-lg-7">
                     <div class="tg-choose-left z-index">
                         <div class="tg-choose-title-box mb-35">
-                            <span class="tg-section-subtitle">Why Retrievetron Stands Out</span>
+                            <span class="tg-section-subtitle">Why RetrivalPrime Stands Out</span>
                             <h4 class="tg-section-title pb-15">Four Pillars of <br> Unmatched Service</h4>
-                            <p>Choosing Retrievetron means opting for a partner that not only <br>understands the
+                            <p>Choosing RetrivalPrime means opting for a partner that not only <br>understands the
                                 digital
                                 recovery landscape but also values your <br> peace of mind and financial integrity. Here
                                 are
@@ -524,14 +525,19 @@
                     <div class="row">
                         @foreach ($services as $service)
                             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
-                                <div class="tg-service-3-item text-center" style="min-height: 400px">
-                                    <div class="tg-service-3-icon mb-25">
-                                        <span>
+                                <div class="tg-service-3-item text-center" data-wow-duration=".9s"
+                                    data-wow-delay=".5s"
+                                    style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.5s; animation-name: tgfadeUp; min-height: 400px;">
+                                    <div class=" mb-5" style="min-height:150px">
+                                        <img src="{{ asset($service->image) }}"
+                                            style="width: 100%; border-radius:40px" />
+                                        {{-- <span>
                                             <i class="{{ $service->icon }}"></i>
-                                        </span>
+                                        </span> --}}
                                     </div>
                                     <div class="tg-service-3-content">
-                                        <h5 class="tg-service-3-title pb-10"> <a href="">{{ $service->name }}
+                                        <h5 class="tg-service-3-title pb-2"> <a
+                                                href="{{ route('pages.service', $service) }}">{{ $service->name }}
                                             </a>
                                         </h5>
                                         <p>{{ $service->content }} </p>

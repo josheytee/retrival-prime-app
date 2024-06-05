@@ -23,12 +23,9 @@
                     situations but generally falls into one of three categories: extortion, coercion, or
                     commercial pressure. Typically, extortion involves a financial demand to keep information
                     secret.</p>
-                    <p>Retrievetron provides support to those affected by online blackmail, assisting victims of
+                    <p>RetrivalPrime provides support to those affected by online blackmail, assisting victims of
                         sextortion, online threats, and the broader spectrum of extortion, coercion, and commercial
                         exploitation.</p>
-
-
-
 
                     <a href="{{ route('pages.contact') }}" class="tg-btn-gradient mt-20 text-center">
                         Request for specialist
@@ -47,9 +44,9 @@
             <h2 class="tg-sv-details-title-sm mb-10">We provide a complete range of Game activation and reactivation
                 services</h2>
             <p class="mb-10">
-                We deliver comprehensive game activation and reactivation solutions tailored to our clients’ specific
-                requirements, leveraging our extensive resources and employing efficient strategies that prioritize
-                time-saving results.</p>
+                RetrivalPrime delivers comprehensive solutions against blackmail, tailored to individual needs and
+                backed
+                by sophisticated resources for prompt and effective resolution.</p>
 
         </div>
     </div>

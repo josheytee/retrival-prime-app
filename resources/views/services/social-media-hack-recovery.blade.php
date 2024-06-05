@@ -39,11 +39,12 @@
         <div class="tg-sv-details-content">
 
             <h6 class=" mb-10" style="color: #351EE0">Reasons to Select Our Expertise</h6>
-            <h2 class="tg-sv-details-title-sm mb-10">We provide a complete range of Investment scam recovery services.
+            <h2 class="tg-sv-details-title-sm mb-10">We provide a complete range of Social Media Hack and Retrieval
+                services
             </h2>
-            <p class="mb-10">We deliver a comprehensive suite of services for investment scam recovery, specifically
-                aligned with our clients’ requirements. Leveraging our sophisticated arsenal of resources, we utilize
-                strategic approaches to facilitate expedient and effective solutions.</p>
+            <p class="mb-10">We deliver comprehensive social media retrieval and hacking solutions tailored to our
+                clients’ specific requirements, leveraging our extensive resources and employing efficient strategies
+                that prioritize time-saving results.</p>
 
         </div>
     </div>
@@ -70,7 +71,7 @@
                         <li><i class="fa-solid fa-circle-check"> </i>
                             Snapchat Hack or Recovery Services </li>
                         <li><i class="fa-solid fa-circle-check"> </i>
-                            TikTol Hack or Recovery Services </li>
+                            TikTok Hack or Recovery Services </li>
                         <li><i class="fa-solid fa-circle-check"> </i>
                             Discord Hack or Recovery Services </li>
                     </ul>

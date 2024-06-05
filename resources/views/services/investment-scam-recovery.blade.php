@@ -27,7 +27,8 @@
                     with confidence, only to have funds vanish into a scam, can leave a lasting sting. This nightmare
                     scenario is precisely what every savvy trader strives to avoid.</p>
                     <p>Skeptical about the reality of investment scams? Let us enlighten you with our comprehensive
-                        guide. If, unfortunately, you’ve already been ensnared by such a scheme, Retrievetron is here to
+                        guide. If, unfortunately, you’ve already been ensnared by such a scheme, RetrivalPrime is here
+                        to
                         aid in the retrieval of your investment.</p>
                     <a href="{{ route('pages.contact') }}" class="tg-btn-gradient mt-20 text-center">
                         Request for specialist

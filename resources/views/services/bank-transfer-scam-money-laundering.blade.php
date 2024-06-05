@@ -25,7 +25,7 @@
                     These scams can be elaborate, often cloaking themselves in the guise of legitimate transactions.
                     Victims are misled by intricate stories or urgent requests that prompt them to act quickly, leading
                     to unauthorized transfers of their hard-earned money.</p>
-                    <p>Retrievetron steps into this distressing scenario with a robust recovery process. We don’t just
+                    <p>RetrivalPrime steps into this distressing scenario with a robust recovery process. We don’t just
                         help in reclaiming assets transferred under deceptive pretenses; we also assist with unresolved
                         bank transfers that are hanging in the balance. Whether it’s rectifying erroneous E-transfers,
                         retrieving money orders through services like MoneyGram, or navigating the complex web of
