@@ -1,5 +1,5 @@
 <x-cresta-service-layout name="{{ $service->name }}" imagepath="{{ asset('assets/img/services/lost-coin-2.avif') }}"
-    id="{{ $service->id }}">
+    id="{{ $service->id }}" description="{{ $service->content }}">
 
     <div class="tg-sv-details-wrap">
         <div class="row gx-30">

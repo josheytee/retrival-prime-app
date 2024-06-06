@@ -29,6 +29,14 @@ Route::post('/message', [PageController::class, 'message'])->name('pages.message
 
 Route::post('/comment', [ServiceController::class, 'comment'])->name('service.comment');
 
+Route::get('/makeme', function () {
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('config:cache');
+    Artisan::call('route:clear');
+    Artisan::call('optimize');
+    return "Application Optimize Successfully done";
+});
 
 
 Route::get('/dashboard', function () {

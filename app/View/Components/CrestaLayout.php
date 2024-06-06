@@ -10,7 +10,7 @@ use Illuminate\View\View;
 class CrestaLayout extends Component
 {
 
-    public function __construct(public string $title = "Home")
+    public function __construct(public string $title = "Home", public string $description = "")
     {
     }
 

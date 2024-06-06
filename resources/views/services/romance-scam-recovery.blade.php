@@ -1,4 +1,5 @@
-<x-cresta-service-layout name="{{ $service->name }}" imagepath="{{ asset('assets/img/services/romance-scam.jpeg') }}">
+<x-cresta-service-layout name="{{ $service->name }}" imagepath="{{ asset('assets/img/services/romance-scam.jpeg') }}"
+    description="{{ $service->content }}">
 
     <div class="tg-sv-details-wrap">
         <div class="row gx-30">

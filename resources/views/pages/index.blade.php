@@ -249,6 +249,97 @@
     </div>
 
 
+    <!-- expart area start -->
+    <div class="tg-exp-area pt-10 pb-55 grey-bg">
+        <div class="container">
+            <div class="tg-exp-top-wrap">
+                <div class="row align-items-end">
+                    <div class="col-xl-7 col-lg-7 col-md-6">
+                        <div class="tg-exp-title-box">
+                            <span class="tg-section-subtitle">top tier services</span>
+                            <h4 class="tg-section-title">Highly Skilled Services and Innovative Solutions. </h4>
+                        </div>
+                    </div>
+                    {{-- <div class="col-xl-5 col-lg-5 col-md-6">
+                        <div class="tg-exp-top-text">
+                            <p>Information Technology is a broad category that the think a encompasses various
+                                technologies and practices </p>
+                        </div>
+                    </div> --}}
+                </div>
+            </div>
+            {{-- <div class="tg-exp-main-wrap">
+                <div class="row">
+                    @foreach ($services as $service)
+                        <div class="col-xl-4" style="height: 350px">
+                            <div class="tg-exp-item tg-reveal-item p-relative active">
+                                <a href="{{ route('pages.service', $service) }}">
+                                    <div class="row align-items-center">
+
+                                        <div class="col-xl-12 ">
+                                            <div class="tg-exp-contet">
+                                                <h4 class="tg-exp-title-sm">{{ $service->name }}</h4>
+                                                <p>{{ $service->content }} </p>
+                                            </div>
+                                            <div class="tg-exp-btn-box mt-10">
+                                                <span class="tg-btn-gradient-border">
+                                                    <span>
+                                                        Read More
+                                                        <svg width="17" height="12" viewBox="0 0 17 12"
+                                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M15.6875 6.71875L11.6875 10.7188C11.3125 11.125 10.6562 11.125 10.2812 10.7188C9.875 10.3438 9.875 9.6875 10.2812 9.3125L12.5625 7H1C0.4375 7 0 6.5625 0 6C0 5.40625 0.4375 5 1 5H12.5625L10.2812 2.71875C9.875 2.34375 9.875 1.6875 10.2812 1.3125C10.6562 0.90625 11.3125 0.90625 11.6875 1.3125L15.6875 5.3125C16.0938 5.6875 16.0938 6.34375 15.6875 6.71875Z"
+                                                                fill="currentcolor" />
+                                                        </svg>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </a>
+        </div>
+    </div>
+    @endforeach
+
+
+    </div>
+    </div> --}}
+            <div class="tg-service-3-area tg-service-3-inner-style z-index-3 pt-50 pb-115">
+                <div class="container">
+                    <div class="row">
+                        @foreach ($services as $service)
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                                <div class="tg-service-3-item text-center" data-wow-duration=".9s"
+                                    data-wow-delay=".5s"
+                                    style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.5s; animation-name: tgfadeUp; min-height: 400px;">
+                                    <div class=" mb-5" style="min-height:150px">
+                                        <img src="{{ asset($service->image) }}"
+                                            style="width: 100%; border-radius:40px" />
+                                        {{-- <span>
+                                            <i class="{{ $service->icon }}"></i>
+                                        </span> --}}
+                                    </div>
+                                    <div class="tg-service-3-content">
+                                        <h5 class="tg-service-3-title pb-2"> <a
+                                                href="{{ route('pages.service', $service) }}">{{ $service->name }}
+                                            </a>
+                                        </h5>
+                                        <p>{{ $service->content }} </p>
+                                        <a class="mt-3 tg-btn-gradient d-none d-md-block"
+                                            href="{{ route('pages.service', $service) }}">Learn
+                                            More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- expart area end -->
+
 
 
 
@@ -461,99 +552,6 @@
         </div>
     </div>
     <!-- choose-area-end -->
-
-
-
-    <!-- expart area start -->
-    <div class="tg-exp-area pt-10 pb-55 grey-bg">
-        <div class="container">
-            <div class="tg-exp-top-wrap">
-                <div class="row align-items-end">
-                    <div class="col-xl-7 col-lg-7 col-md-6">
-                        <div class="tg-exp-title-box">
-                            <span class="tg-section-subtitle">top tier services</span>
-                            <h4 class="tg-section-title">Highly Skilled Services and Innovative Solutions. </h4>
-                        </div>
-                    </div>
-                    {{-- <div class="col-xl-5 col-lg-5 col-md-6">
-                        <div class="tg-exp-top-text">
-                            <p>Information Technology is a broad category that the think a encompasses various
-                                technologies and practices </p>
-                        </div>
-                    </div> --}}
-                </div>
-            </div>
-            {{-- <div class="tg-exp-main-wrap">
-                <div class="row">
-                    @foreach ($services as $service)
-                        <div class="col-xl-4" style="height: 350px">
-                            <div class="tg-exp-item tg-reveal-item p-relative active">
-                                <a href="{{ route('pages.service', $service) }}">
-                                    <div class="row align-items-center">
-
-                                        <div class="col-xl-12 ">
-                                            <div class="tg-exp-contet">
-                                                <h4 class="tg-exp-title-sm">{{ $service->name }}</h4>
-                                                <p>{{ $service->content }} </p>
-                                            </div>
-                                            <div class="tg-exp-btn-box mt-10">
-                                                <span class="tg-btn-gradient-border">
-                                                    <span>
-                                                        Read More
-                                                        <svg width="17" height="12" viewBox="0 0 17 12"
-                                                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M15.6875 6.71875L11.6875 10.7188C11.3125 11.125 10.6562 11.125 10.2812 10.7188C9.875 10.3438 9.875 9.6875 10.2812 9.3125L12.5625 7H1C0.4375 7 0 6.5625 0 6C0 5.40625 0.4375 5 1 5H12.5625L10.2812 2.71875C9.875 2.34375 9.875 1.6875 10.2812 1.3125C10.6562 0.90625 11.3125 0.90625 11.6875 1.3125L15.6875 5.3125C16.0938 5.6875 16.0938 6.34375 15.6875 6.71875Z"
-                                                                fill="currentcolor" />
-                                                        </svg>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </a>
-        </div>
-    </div>
-    @endforeach
-
-
-    </div>
-    </div> --}}
-            <div class="tg-service-3-area tg-service-3-inner-style z-index-3 pt-50 pb-115">
-                <div class="container">
-                    <div class="row">
-                        @foreach ($services as $service)
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
-                                <div class="tg-service-3-item text-center" data-wow-duration=".9s"
-                                    data-wow-delay=".5s"
-                                    style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.5s; animation-name: tgfadeUp; min-height: 400px;">
-                                    <div class=" mb-5" style="min-height:150px">
-                                        <img src="{{ asset($service->image) }}"
-                                            style="width: 100%; border-radius:40px" />
-                                        {{-- <span>
-                                            <i class="{{ $service->icon }}"></i>
-                                        </span> --}}
-                                    </div>
-                                    <div class="tg-service-3-content">
-                                        <h5 class="tg-service-3-title pb-2"> <a
-                                                href="{{ route('pages.service', $service) }}">{{ $service->name }}
-                                            </a>
-                                        </h5>
-                                        <p>{{ $service->content }} </p>
-                                        <a class="mt-3 tg-btn-gradient d-none d-md-block"
-                                            href="{{ route('pages.service', $service) }}">Learn
-                                            More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- expart area end -->
 
 
     <a id="testimonials"></a>

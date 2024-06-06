@@ -1,4 +1,4 @@
-<x-cresta-layout>
+<x-cresta-layout title="Contact">
 
     <!-- breadcrumb-area-start -->
     <div class="tg-breadcrumb-area tg-breadcrumb-height tg-breadcrumb-overley black-bg p-relative"
