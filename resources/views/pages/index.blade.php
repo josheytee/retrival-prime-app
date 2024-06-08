@@ -68,9 +68,11 @@
                     data-wow-delay=".3s">
                     <div class="tg-feature-item text-center">
                         <div class="tg-feature-icon mb-15">
-                            <span>
+                            {{-- <span>
                                 <i class="fa-regular fa-clock"></i>
-                            </span>
+                            </span> --}}
+                            <img src="{{ asset('assets/img/provided/24support.png') }}" alt="" srcset=""
+                                style="width: 100px;height: 100px;">
                         </div>
                         <h5 class="tg-feature-title">
                             24 hour support</h5>
@@ -80,9 +82,12 @@
                     data-wow-delay=".5s">
                     <div class="tg-feature-item text-center">
                         <div class="tg-feature-icon pl mb-15">
-                            <span>
+                            <img src="{{ asset('assets/img/provided/money-back-guaranteed-vector-trusts-badge_526569-37.jpg') }}"
+                                alt="" srcset="" style="width: 100px;height: 100px;">
+
+                            {{-- <span>
                                 <i class="fa-solid fa-hand-holding-dollar"></i>
-                            </span>
+                            </span> --}}
                         </div>
                         <h5 class="tg-feature-title">
                             100% refund guarnatee
@@ -93,9 +98,12 @@
                     data-wow-delay=".7s">
                     <div class="tg-feature-item text-center">
                         <div class="tg-feature-icon mb-15">
-                            <span>
+                            <img src="{{ asset('assets/img/provided/no win.png') }}" alt="" srcset=""
+                                style="width: 100px;height: 100px;">
+
+                            {{-- <span>
                                 <i class="fa-regular fa-thumbs-up"></i>
-                            </span>
+                            </span> --}}
                         </div>
                         <h5 class="tg-feature-title"> No Win no fee</h5>
                     </div>
@@ -586,28 +594,28 @@
                         </div>
                         <div class="swiper-container tg-testimonial-active fix">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="tg-testimonial-slider-item">
-                                        <div class="tg-testimonial-avata-box mb-45 d-flex align-items-center">
-                                            <div class="tg-testimonial-avata">
-                                                <img src="assets/img/testimonial/avata-1.png" alt="">
+                                @foreach ($testimonials as $testimonial)
+                                    <div class="swiper-slide">
+                                        <div class="tg-testimonial-slider-item">
+                                            <div class="tg-testimonial-avata-box mb-45 d-flex align-items-center">
+                                                <div class="tg-testimonial-avata">
+                                                    <img src="{{ asset($testimonial->image) }}" alt="">
+                                                </div>
+                                                <div class="tg-testimonial-avata-info">
+                                                    <h4 class="tg-testimonial-avata-name">{{ $testimonial->user }}
+                                                    </h4>
+                                                    <span>{{ $testimonial->title }}</span>
+                                                </div>
                                             </div>
-                                            <div class="tg-testimonial-avata-info">
-                                                <h4 class="tg-testimonial-avata-name">Dianne Russell</h4>
-                                                <span>Software Engineer</span>
+                                            <div class="tg-testimonial-content p-relative">
+                                                <p>{{ $testimonial->content }}</p>
+                                                <img class="tg-testimonial-quote"
+                                                    src="assets/img/testimonial/quote.png" alt="">
                                             </div>
-                                        </div>
-                                        <div class="tg-testimonial-content p-relative">
-                                            <p>Working with this company has been a game-changer for my thw
-                                                business. Their expertise and innovative approach have helped us
-                                                achieve remarkable growth Working with this company has been a
-                                                game-changer for my thw business</p>
-                                            <img class="tg-testimonial-quote" src="assets/img/testimonial/quote.png"
-                                                alt="">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
+                                @endforeach
+                                {{-- <div class="swiper-slide">
                                     <div class="tg-testimonial-slider-item">
                                         <div class="tg-testimonial-avata-box mb-45 d-flex align-items-center">
                                             <div class="tg-testimonial-avata">
@@ -648,7 +656,7 @@
                                                 alt="">
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>

@@ -359,8 +359,8 @@
                         <div class="tg-header-top__info">
                             <ul>
                                 <li>
-                                    <i class="fa-sharp fa-solid fa-location-dot"></i>
-                                    <a href="https://www.google.com/maps" target="_blank">{{ $about->address }}</a>
+                                    {{-- <i class="fa-sharp fa-solid fa-location-dot"></i>
+                                    <a href="https://www.google.com/maps" target="_blank">{{ $about->address }}</a> --}}
                                 </li>
                                 <li class="d-none d-md-inline-block">
                                     <i class="fa-light fa-clock"></i>
@@ -373,6 +373,8 @@
                         <div class="tg-header-top__social text-end">
                             <a href="{{ $about->facebook }}" target="_blank"><i
                                     class="fa-brands fa-facebook-f"></i></a>
+                            <a href="{{ $about->telegram }}" target="_blank"><i
+                                    class="fa-brands fa-telegram"></i></a>
                             <a href="{{ $about->instagram }}" target="_blank"><i
                                     class="fa-brands fa-instagram"></i></a>
                             <a href="mailto:{{ $about->email }}" target="_blank"><i
@@ -460,6 +462,8 @@
                     <ul class="list-wrap">
                         <li><a href="{{ $about->facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         </li>
+                        <li> <a href="{{ $about->telegram }}" target="_blank"><i
+                                    class="fa-brands fa-telegram"></i></a> </li>
                         <li><a href="{{ $about->instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
                         </li>
                         <li><a href="{{ $about->whatsapp }}" target="_blank"><i class="fab fa-whatsapp"></i></a>

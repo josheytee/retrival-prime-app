@@ -160,6 +160,8 @@
 
                                 <a href="{{ $about->facebook }}" target="_blank"><i
                                         class="fa-brands fa-facebook-f"></i></a>
+                                <a href="{{ $about->telegram }}" target="_blank"><i
+                                        class="fa-brands fa-telegram"></i></a>
                                 <a href="{{ $about->instagram }}" target="_blank"><i
                                         class="fa-brands fa-instagram"></i></a>
                                 <a href="mailto:{{ $about->email }}" target="_blank"><i
