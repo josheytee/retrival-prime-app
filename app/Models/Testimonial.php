@@ -6,19 +6,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class About extends Model
+class Testimonial extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'description',
-        'address',
-        'facebook',
-        'instagram',
-        'telegram',
-        'whatsapp',
-        'email',
-        'phone',
+        'user',
+        'image',
+        'profession',
+        'title',
+        'content'
     ];
 }

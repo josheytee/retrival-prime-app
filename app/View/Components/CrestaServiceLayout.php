@@ -11,7 +11,7 @@ class CrestaServiceLayout extends Component
 {
 
     // public $id;
-    public function __construct(public string $name, public string $imagepath = "", public int $id = 0)
+    public function __construct(public string $name, public string $imagepath = "", public string $description = "", public int $id = 0)
     {
         $this->id = $id;
     }

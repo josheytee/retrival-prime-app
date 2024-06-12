@@ -4,21 +4,31 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>RetrivalPrime | {{ $title }}</title>
+    <title>{{ $about->name }} | {{ $title }}</title>
 
-    <meta name="robots" content="noindex, follow" />
-    <meta name="description"
-        content="Discover the top rated Titanium Stainless Steel cookware- we have the right pot, pan or baking dish when it’s time to whip up a masterpiece in your kitchen! best cookware in Lagos Nigeira">
-    <meta name="description"
-        content="Browse our wide selection of high-quality cookware sets, saucepans, stock pots, skillets, sautés, and more. Enhance your cooking experience with our gourmet slow cookers and specialty items. We also offer a range of bakeware including cookie sheets, cake pans, and loaf pans. Shop now for the best cookware and bakeware sets to elevate your culinary creations.">
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="@yield('og_title')" />
-    <meta property="og:url" content="@yield('og_url')" />
-    <meta property="og:site_name" content="Kitchen Craft | waterlesscookware" />
+    <meta name="description" content="{{ $description ?? $about->description }}">
+    <meta name="robots" content="max-image-preview:large">
+    <link rel="canonical" href="https://retrivalprime.com/">
+    <meta name="generator" content="All in One SEO (AIOSEO) 4.6.0">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="{{ $about->name }} - {{ $about->tagline }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ $about->name }} - {{ $about->tagline }}">
+    <meta property="og:description" content="{{ $about->description }}">
+    <meta property="og:url" content="https://retrivalprime.com/">
+    <meta property="og:image" content="{{ asset('assets/img/logo/retrivalprime.png') }}">
+    <meta property="og:image:secure_url" content="{{ asset('assets/img/logo/retrivalprime.png') }}">
+    <meta property="og:image:width" content="162">
+    <meta property="og:image:height" content="162">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $about->name }} - {{ $about->tagline }}">
+    <meta name="twitter:description" content="{{ $about->description }}">
+    <meta name="twitter:image" content="{{ asset('assets/img/logo/retrivalprime.png') }}">
+    <script type="application/ld+json" class="aioseo-schema">
+        {"@context":"https:\/\/schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https:\/\/retrievetron.com\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/retrievetron.com\/#listItem","position":1,"name":"Home"}]},{"@type":"Organization","@id":"https:\/\/retrievetron.com\/#organization","name":"Retrievetron","url":"https:\/\/retrievetron.com\/","logo":{"@type":"ImageObject","url":"https:\/\/retrievetron.com\/wp-content\/uploads\/2023\/11\/Retrievetron_logo.png","@id":"https:\/\/retrievetron.com\/#organizationLogo","width":685,"height":102},"image":{"@id":"https:\/\/retrievetron.com\/#organizationLogo"},"sameAs":["https:\/\/instagram.com\/retrievetron?igshid=NGVhN2U2NjQ0Yg=="]},{"@type":"WebPage","@id":"https:\/\/retrievetron.com\/#webpage","url":"https:\/\/retrievetron.com\/","name":"Retrievetron - {{ $about->tagline }}","description":"Welcome to the cutting-edge of cybertech. At Retrievetron, our elite IT professionals deliver state-of-the-art solutions to protect and empower you in the digital world.","inLanguage":"en-GB","isPartOf":{"@id":"https:\/\/retrievetron.com\/#website"},"breadcrumb":{"@id":"https:\/\/retrievetron.com\/#breadcrumblist"},"image":{"@type":"ImageObject","url":"https:\/\/retrievetron.com\/wp-content\/uploads\/2023\/11\/retrievetron_favicon-1.png","@id":"https:\/\/retrievetron.com\/#mainImage","width":162,"height":162},"primaryImageOfPage":{"@id":"https:\/\/retrievetron.com\/#mainImage"},"datePublished":"2023-10-23T15:30:14+01:00","dateModified":"2024-06-02T19:52:57+01:00"},{"@type":"WebSite","@id":"https:\/\/retrievetron.com\/#website","url":"https:\/\/retrievetron.com\/","name":"Retrievetron","description":"{{ $about->tagline }}","inLanguage":"en-GB","publisher":{"@id":"https:\/\/retrievetron.com\/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/retrievetron.com\/?s={search_term_string}"},"query-input":"required name=search_term_string"}}]}
+    </script>
 
 
-
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/logo/retrivalprime.png') }}">
@@ -349,8 +359,8 @@
                         <div class="tg-header-top__info">
                             <ul>
                                 <li>
-                                    <i class="fa-sharp fa-solid fa-location-dot"></i>
-                                    <a href="https://www.google.com/maps" target="_blank">{{ $about->address }}</a>
+                                    {{-- <i class="fa-sharp fa-solid fa-location-dot"></i>
+                                    <a href="https://www.google.com/maps" target="_blank">{{ $about->address }}</a> --}}
                                 </li>
                                 <li class="d-none d-md-inline-block">
                                     <i class="fa-light fa-clock"></i>
@@ -363,11 +373,14 @@
                         <div class="tg-header-top__social text-end">
                             <a href="{{ $about->facebook }}" target="_blank"><i
                                     class="fa-brands fa-facebook-f"></i></a>
+                            <a href="{{ $about->telegram }}" target="_blank"><i
+                                    class="fa-brands fa-telegram"></i></a>
                             <a href="{{ $about->instagram }}" target="_blank"><i
                                     class="fa-brands fa-instagram"></i></a>
                             <a href="mailto:{{ $about->email }}" target="_blank"><i
                                     class="fa-solid fa-envelope"></i></a>
-                            <a href="{{ $about->whatsapp }}" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="{{ $about->whatsapp }}" target="_blank"><i
+                                    class="fa-brands fa-whatsapp"></i></a>
                         </div>
                     </div>
                 </div>
@@ -449,6 +462,8 @@
                     <ul class="list-wrap">
                         <li><a href="{{ $about->facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         </li>
+                        <li> <a href="{{ $about->telegram }}" target="_blank"><i
+                                    class="fa-brands fa-telegram"></i></a> </li>
                         <li><a href="{{ $about->instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
                         </li>
                         <li><a href="{{ $about->whatsapp }}" target="_blank"><i class="fab fa-whatsapp"></i></a>

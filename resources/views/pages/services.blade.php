@@ -1,4 +1,4 @@
-<x-cresta-layout>
+<x-cresta-layout title="services">
 
     <!-- breadcrumb-area-start -->
     <div class="tg-breadcrumb-area tg-breadcrumb-height tg-breadcrumb-overley black-bg p-relative"
@@ -19,31 +19,45 @@
         </div>
     </div>
     <!-- breadcrumb-area-end -->
-    <div class="tg-service-3-area tg-service-3-inner-style z-index-3 pt-110 pb-115">
+
+
+    <!-- expart area start -->
+    <div class="tg-exp-area pt-10 pb-55 grey-bg">
         <div class="container">
-            <div class="row">
-                @foreach ($services as $service)
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
-                        <div class="tg-service-3-item text-center" style="min-height: 400px">
-                            <div class="tg-service-3-icon mb-25">
-                                <span>
-                                    <i class="{{ $service->icon }}"></i>
-                                </span>
+
+            <div class="tg-service-3-area tg-service-3-inner-style z-index-3 pt-50 pb-115">
+                <div class="container">
+                    <div class="row">
+                        @foreach ($services as $service)
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                                <div class="tg-service-3-item text-center" data-wow-duration=".9s" data-wow-delay=".5s"
+                                    style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.5s; animation-name: tgfadeUp; min-height: 400px;">
+                                    <div class=" mb-5" style="min-height:150px">
+                                        <img src="{{ asset($service->image) }}"
+                                            style="width: 100%; border-radius:40px" />
+                                        {{-- <span>
+                                            <i class="{{ $service->icon }}"></i>
+                                        </span> --}}
+                                    </div>
+                                    <div class="tg-service-3-content">
+                                        <h5 class="tg-service-3-title pb-2"> <a
+                                                href="{{ route('pages.service', $service) }}">{{ $service->name }}
+                                            </a>
+                                        </h5>
+                                        <p>{{ $service->content }} </p>
+                                        <a class="mt-3 tg-btn-gradient d-none d-md-block"
+                                            href="{{ route('pages.service', $service) }}">Learn
+                                            More</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="tg-service-3-content">
-                                <h5 class="tg-service-3-title pb-10"> <a href="">{{ $service->name }} </a>
-                                </h5>
-                                <p>{{ $service->content }} </p>
-                                <a class="mt-3 tg-btn-gradient d-none d-md-block"
-                                    href="{{ route('pages.service', $service) }}">Learn
-                                    More</a>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
-                @endforeach
+                </div>
             </div>
         </div>
     </div>
+    <!-- expart area end -->
 
     <!-- service-area-start -->
     {{-- <div class="tg-service-3-area tg-service-3-inner-style z-index-3 pt-110 pb-115">

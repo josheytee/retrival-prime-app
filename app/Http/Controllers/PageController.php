@@ -6,6 +6,7 @@ use App\Http\Requests\ProfileUpdateRequest;
 use App\Models\About;
 use App\Models\Contact;
 use App\Models\Service;
+use App\Models\Testimonial;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -21,7 +22,8 @@ class PageController extends Controller
     public function index(Request $request): View
     {
         $services = Service::all();
-        return view('pages.index', compact('services'));
+        $testimonials = Testimonial::all();
+        return view('pages.index', compact('services', 'testimonials'));
     }
 
     /**

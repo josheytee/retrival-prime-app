@@ -1,4 +1,4 @@
-<x-cresta-layout title="{{ $name }}" discription="">
+<x-cresta-layout title="{{ $name }}" description="{{ $description }}">
     <div class="tg-breadcrumb-area tg-breadcrumb-height tg-breadcrumb-overley black-bg p-relative"
         data-background="{{ $imagepath }}" id="{{ $id }}">
         <div class="container">
