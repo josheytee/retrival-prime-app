@@ -4,10 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ $about->name }} | {{ $title }}</title>
+    <title>{{ $title }} | {{ $about->name }}</title>
 
-    <meta name="description" content="{{ $description ?? $about->description }}">
-    <meta name="robots" content="max-image-preview:large">
+    <meta name="description" content="{{ $description ? $description : $about->description }}">
+    <meta name="robots" content="all">
+    {{-- <meta name="robots" content="noindex"> --}}
     <link rel="canonical" href="https://retrivalprime.com/">
     <meta name="generator" content="All in One SEO (AIOSEO) 4.6.0">
     <meta property="og:locale" content="en_GB">
@@ -49,7 +50,6 @@
 </head>
 
 <body>
-
     {{--  <!-- pre loader area start --> --}}
     <div id="loading">
         <div id="loading-center">
@@ -359,6 +359,8 @@
                         <div class="tg-header-top__info">
                             <ul>
                                 <li>
+                                    {{-- {{ dd($description ? $description : $about->description) }} --}}
+
                                     {{-- <i class="fa-sharp fa-solid fa-location-dot"></i>
                                     <a href="https://www.google.com/maps" target="_blank">{{ $about->address }}</a> --}}
                                 </li>

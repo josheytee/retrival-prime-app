@@ -1,7 +1,4 @@
-@section('title')
-    Home
-@endsection
-<x-cresta-layout>
+<x-cresta-layout title="{{ $about->tagline }}">
     <!-- hero-area-start -->
     <div class="tg-hero-area tg-hero-ptb z-index theme-bg p-relative fix">
         <div class="tg-hero-shape-3 d-none d-md-block">

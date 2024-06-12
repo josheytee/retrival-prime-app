@@ -23,7 +23,8 @@ class PageController extends Controller
     {
         $services = Service::all();
         $testimonials = Testimonial::all();
-        return view('pages.index', compact('services', 'testimonials'));
+        $about = About::first();
+        return view('pages.index', compact('services', 'testimonials', 'about'));
     }
 
     /**
