@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Admin\TestimonialController;
+use App\Http\Controllers\AdminPageController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
@@ -41,6 +43,9 @@ Route::get('/makeme', function () {
 });
 
 
+Route::get('/welcome', function () {
+    return view('welcome');
+})->name('welcome');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -52,16 +57,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
-
-Route::get('/admin/dashboard', function () {
-    return view('admin.dashboard');
-})->middleware(['auth:admin', 'verified'])->name('admin.dashboard');
-
-// Add profile edit for admin.
-Route::middleware('auth:admin')->group(function () {
-    Route::get('/admin/profile', [AdminProfileController::class, 'edit'])->name('admin.profile.edit');
-    Route::patch('/admin/profile', [AdminProfileController::class, 'update'])->name('admin.profile.update');
-    Route::delete('/admin/profile', [AdminProfileController::class, 'destroy'])->name('admin.profile.destroy');
-});
+require __DIR__ . '/admin.php';
 
 require __DIR__ . '/admin-auth.php';
