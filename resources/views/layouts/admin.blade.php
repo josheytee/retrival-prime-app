@@ -40,8 +40,8 @@
     </div>
 
     <strong>
-        <a href="{{ config('app.company_url', '#') }}">
-            {{ config('app.company_name', 'My company') }}
+        <a href="{{ config('app.url', '#') }}">
+            {{ config('app.name', 'My company') }}
         </a>
     </strong>
 @stop
@@ -62,12 +62,12 @@
     <style type="text/css">
         {{-- You can add AdminLTE customizations here --}}
         /*
-        .card-header {
-            border-bottom: none;
-        }
-        .card-title {
-            font-weight: 600;
-        }
-        */
+                .card-header {
+                    border-bottom: none;
+                }
+                .card-title {
+                    font-weight: 600;
+                }
+                */
     </style>
 @endpush

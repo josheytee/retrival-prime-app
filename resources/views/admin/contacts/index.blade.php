@@ -61,7 +61,8 @@
                 <td>{{ $contact->email }}</td>
                 <td>{{ $contact->phone }}</td>
                 <td>{{ $contact->country }}</td>
-                <td>{{ $contact->serivce->name }}</td>
+
+                <td>{{ isset($contact->serivce) ? $contact->serivce->name : 'NA' }}</td>
                 <td>{{ $contact->message }}</td>
                 <td>
                     @if ($contact->acknowledged)

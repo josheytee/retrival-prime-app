@@ -5,6 +5,8 @@ use App\Http\Controllers\Admin\CommentController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\AdminProfileController;
+use App\Models\Comment;
+use App\Models\Contact;
 use Illuminate\Support\Facades\Route;
 
 
@@ -12,7 +14,9 @@ Route::group(['middleware' => ['auth:admin']], function () {
     Route::prefix('admin')->group(function () {
 
         Route::get('/dashboard', function () {
-            return view('admin.dashboard');
+            $comments =  Comment::where('approved', 0)->count();
+            $contacts =  Contact::where('acknowledged', 0)->count();
+            return view('admin.dashboard', compact('comments', 'contacts'));
         })->middleware('verified')->name('admin.dashboard');
 
         Route::resource('testimonials', TestimonialController::class);
